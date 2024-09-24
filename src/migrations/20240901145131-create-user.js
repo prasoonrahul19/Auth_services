@@ -11,19 +11,17 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
-        allowNull:false,
-        unique:true,
-        validate:{ 
-          isEmail :true
+        allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: true
         }
       },
       password: {
         type: Sequelize.STRING,
-        allowNull:false,
-        validate:
-        {
-          //i can also use notIn:[{}] to check protect the user to set some of the world famous passwords
-          len: [5,20],
+        allowNull: false,
+        validate: {
+          len: [3, 300]
         }
       },
       createdAt: {
