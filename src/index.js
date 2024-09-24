@@ -5,6 +5,8 @@ const { PORT } = require('./config/serverConfig')
 
 const apiRoutes = require('./routes/index');
 
+const UserRepository = require('./repository/user-repository');
+
 const app = express();
 
 const preapreAndStartServer = () => {
@@ -14,8 +16,11 @@ const preapreAndStartServer = () => {
 
     app.use('/api',apiRoutes);
 
-    app.listen(PORT,()=>{
+    app.listen(PORT,async()=>{
         console.log(`server started at : ${PORT}`);
+        const repo = new UserRepository();
+        const response = await repo.getById(1);
+        console.log(response);
     });
 }
 
