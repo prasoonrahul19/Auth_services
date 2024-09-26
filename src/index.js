@@ -33,7 +33,7 @@ const preapreAndStartServer = () => {
 
 // ####################### Verifing a token ######################
 
-        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVAZ21haWwuY29tIiwiaWQiOjEsImlhdCI6MTcyNzMzOTU2NCwiZXhwIjoxNzI3MzQ2NzY0fQ._JLyVsirYvK7Af8pXgtDQeYjk-NhCnpjN5BmkIMUvGY';
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVAZ21haWwuY29tIiwiaWQiOjEsImlhdCI6MTcyNzM2MzA4OCwiZXhwIjoxNzI3NTM1ODg4fQ.0zfvR0J5QARwveorK9Tk0JFpzcHRx9Jo5ZALY66b5QM';
         const response =  services.verifyToken(token);
         console.log(response); 
         
